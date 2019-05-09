@@ -20,15 +20,15 @@ function changeValue() {
     let positionY = prompt("Y: ");
     data = "";
     if (dem % 2 == 0) {
-        board[positionX][positionY] = "x";
+        board[positionX][positionY] = " x";
     } else {
-        board[positionX][positionY] = "o";
+        board[positionX][positionY] = " o";
     }
     for (let i = 0; i < x; i++) {
         data += "<br/>";
         for (let j = 0; j < y; j++) {
-            data += board[i][j];
-        }
+            data += "&nbsp;&nbsp;"+board[i][j]+"&nbsp;&nbsp;";
+    }
     }
     data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
     b.innerHTML = "<hr/>" + data;
