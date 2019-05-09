@@ -43,6 +43,8 @@ function changeValue() {
                     document.getElementById('result').innerHTML = board[i][j] + ' thang';
                 } else if (board[i + 1][j + 1] == board[i][j] && board[i + 2][j + 2] == board[i][j]) {
                     document.getElementById('result').innerHTML = board[i][j] + ' thang';
+                }else if (board[i + 1][j - 1] == board[i][j] && board[i + 2][j - 2] == board[i][j]) {
+                    document.getElementById('result').innerHTML = board[i][j] + ' thang';
                 }
             }
         }
